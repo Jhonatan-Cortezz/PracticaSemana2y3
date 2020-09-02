@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jac.practicasemana3">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".POO.AgendaPoo"></activity>
+        <activity android:name=".POO.SharedPoo" />
+        <activity android:name=".POO.Web" />
+        <activity android:name=".POO.IntParametros" />
+        <activity android:name=".POO.AboutPoo" />
+        <activity android:name=".POO.IntentPoo" />
+        <activity android:name=".POO.EditPoo" />
+        <activity android:name=".POO.ToastPoo" />
+        <activity android:name=".POO.ImagePoo" />
+        <activity android:name=".POO.ListViewPoo" />
+        <activity android:name=".POO.SpinnerPoo" />
+        <activity android:name=".POO.CheckboxPoo" />
+        <activity android:name=".POO.RadioPoo" />
+        <activity android:name=".POO.ButtonPoo" />
+        <activity android:name=".Agenda" />
+        <activity android:name=".SharedActivity" />
+        <activity android:name=".SitioWeb" />
+        <activity android:name=".IntentParametros" />
+        <activity android:name=".AcercaDe" />
+        <activity android:name=".IntentActivity" />
+        <activity android:name=".EditTextActivity" />
+        <activity android:name=".ToastActivity" />
+        <activity android:name=".ImageButtonActivity" />
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".SpinnerActivity" />
+        <activity android:name=".CheckBoxActivity" />
+        <activity android:name=".RadioGrup" />
+        <activity android:name=".ButtonTask" />
+        <activity android:name=".GuiaAtivity" />
+        <activity android:name=".PooActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

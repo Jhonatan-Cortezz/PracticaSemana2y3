@@ -9,9 +9,11 @@ import android.text.Layout;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.jac.practicasemana3.Ejercicios.VistaOpciones;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    LinearLayoutCompat capUno, capDos;
+    LinearLayoutCompat capUno, capDos, capaTres;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         capUno =(LinearLayoutCompat) findViewById(R.id.capaUno);
         capDos =(LinearLayoutCompat) findViewById(R.id.capaDos);
+        capaTres = findViewById(R.id.capa3);
 
         capUno.setOnClickListener(this);
         capDos.setOnClickListener(this);
+        capaTres.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +40,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.capaDos:
                 Intent capTwo = new Intent(this, PooActivity.class );
                 startActivity(capTwo);
+
+            case R.id.capa3:
+                Intent capThre = new Intent(this, VistaOpciones.class);
+                startActivity(capThre);
         }
+
     }
 }

@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".POO.AgendaPoo"></activity>
+        <activity android:name=".Ejercicios.Mensaje"></activity>
+        <activity android:name=".Ejercicios.Clave" />
+        <activity android:name=".Ejercicios.VistaOpciones" />
+        <activity android:name=".POO.AgendaPoo" />
         <activity android:name=".POO.SharedPoo" />
         <activity android:name=".POO.Web" />
         <activity android:name=".POO.IntParametros" />

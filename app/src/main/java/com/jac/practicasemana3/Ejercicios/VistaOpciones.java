@@ -51,6 +51,8 @@ public class VistaOpciones extends AppCompatActivity implements AdapterView.OnIt
             //action
         } else if (posicion.equals("Problema propuesto 2: números ramdom")){
             //action
+            Intent intent = new Intent(this, NumeroRamdom.class);
+            startActivity(intent);
         }
     }
 }

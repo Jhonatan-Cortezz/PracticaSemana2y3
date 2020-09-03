@@ -40,10 +40,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.capaDos:
                 Intent capTwo = new Intent(this, PooActivity.class );
                 startActivity(capTwo);
+                break;
 
             case R.id.capa3:
                 Intent capThre = new Intent(this, VistaOpciones.class);
                 startActivity(capThre);
+                break;
         }
 
     }

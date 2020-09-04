@@ -30,10 +30,16 @@ public class ButtonPoo extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View view) {
         BotonSuma suma = new BotonSuma();
-        suma.setNumero1(Double.parseDouble(edtNum1.getText().toString()));
-        suma.setNumero2(Double.parseDouble(edtNum2.getText().toString()));
+        if (edtNum1.getText().toString().length() == 0){
+            edtNum1.setError("Complete este campo");
+        } else if (edtNum2.getText().toString().length() == 0){
+            edtNum2.setError("Complete este campo");
+        } else {
+            suma.setNumero1(Double.parseDouble(edtNum1.getText().toString()));
+            suma.setNumero2(Double.parseDouble(edtNum2.getText().toString()));
 
-        double res = suma.sumar();
-        txtResult.setText(String.format("%.2f", res));
+            double res = suma.sumar();
+            txtResult.setText(String.format("%.2f", res));
+        }
     }
 }

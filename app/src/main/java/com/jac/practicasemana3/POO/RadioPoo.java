@@ -37,17 +37,23 @@ public class RadioPoo extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View view) {
         RadioSuma sum = new RadioSuma();
-        sum.setNum1(Double.parseDouble(edt1.getText().toString()));
-        sum.setNum2(Double.parseDouble(edt2.getText().toString()));
-        double res;
-        if (rd1.isChecked() == true){
-            res = sum.sumar();
-            String parseo = String.valueOf(res);
-            resultado.setText(parseo);
-        } else if (rd2.isChecked() == true){
-            res = sum.restar();
-            String parse = String.valueOf(res);
-            resultado.setText(parse);
+        if (edt1.getText().toString().length() == 0){
+            edt1.setError("Complete este campo");
+        } else if (edt2.getText().toString().length() == 0){
+            edt2.setError("Campo oblogatorio");
+        } else {
+            sum.setNum1(Double.parseDouble(edt1.getText().toString()));
+            sum.setNum2(Double.parseDouble(edt2.getText().toString()));
+            double res;
+            if (rd1.isChecked() == true){
+                res = sum.sumar();
+                String parseo = String.valueOf(res);
+                resultado.setText(parseo);
+            } else if (rd2.isChecked() == true){
+                res = sum.restar();
+                String parse = String.valueOf(res);
+                resultado.setText(parse);
+            }
         }
     }
 }

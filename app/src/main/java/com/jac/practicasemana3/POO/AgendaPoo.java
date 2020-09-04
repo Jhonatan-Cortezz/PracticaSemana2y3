@@ -36,14 +36,20 @@ public class AgendaPoo extends AppCompatActivity implements View.OnClickListener
         DatosAgenda data = new DatosAgenda();
         switch (view.getId()){
             case R.id.btnGuardarP:
-                data.setNombre(edt1.getText().toString());
-                data.setDatos(edt2.getText().toString());
-                SharedPreferences preferencias = getSharedPreferences("agenda", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = preferencias.edit();
-                editor.putString(data.getNombre(), data.getDatos());
-                editor.commit();
-                Toast.makeText(this, "Datos Guardados", Toast.LENGTH_LONG).show();
-                break;
+                if (edt1.getText().toString().length() == 0){
+                    edt1.setError("Llene este campo");
+                } else if (edt2.getText().toString().length() == 0){
+                    edt2.setError("Complete este campo");
+                } else {
+                    data.setNombre(edt1.getText().toString());
+                    data.setDatos(edt2.getText().toString());
+                    SharedPreferences preferencias = getSharedPreferences("agenda", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferencias.edit();
+                    editor.putString(data.getNombre(), data.getDatos());
+                    editor.commit();
+                    Toast.makeText(this, "Datos Guardados", Toast.LENGTH_LONG).show();
+                    break;
+                }
 
             case R.id.btnRecuperarP:
                 data.setNombre(edt1.getText().toString());

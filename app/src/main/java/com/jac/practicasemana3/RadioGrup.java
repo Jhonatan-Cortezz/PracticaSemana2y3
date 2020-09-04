@@ -20,6 +20,7 @@ public class RadioGrup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_radio_grup);
+        setTitle("RadioGrup eventos");
 
         edtNumero1 =(EditText) findViewById(R.id.edtNum1);
         edtNumero2 = findViewById(R.id.edtNum2);
@@ -31,17 +32,23 @@ public class RadioGrup extends AppCompatActivity {
         btnSumar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double n1 = Double.parseDouble(edtNumero1.getText().toString());
-                double n2 = Double.parseDouble(edtNumero2.getText().toString());
+                if (edtNumero1.getText().toString().length() == 0){
+                    edtNumero1.setError("Complete este campo");
+                } else if (edtNumero2.getText().toString().length() == 0){
+                    edtNumero2.setError("Complete este campo");
+                } else {
+                    double n1 = Double.parseDouble(edtNumero1.getText().toString());
+                    double n2 = Double.parseDouble(edtNumero2.getText().toString());
 
-                if (rdRestar.isChecked() == true){
-                    suma = n1 + n2;
-                    String res = String.valueOf(suma);
-                    tvResultado.setText(res);
-                } else if (rdSumar.isChecked() == true){
-                    suma = n1 - n2;
-                    String res = String.valueOf(suma);
-                    tvResultado.setText(res);
+                    if (rdRestar.isChecked() == true){
+                        suma = n1 + n2;
+                        String res = String.valueOf(suma);
+                        tvResultado.setText(res);
+                    } else if (rdSumar.isChecked() == true){
+                        suma = n1 - n2;
+                        String res = String.valueOf(suma);
+                        tvResultado.setText(res);
+                    }
                 }
             }
         });

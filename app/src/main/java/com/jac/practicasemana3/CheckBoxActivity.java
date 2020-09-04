@@ -20,6 +20,7 @@ public class CheckBoxActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_box);
+        setTitle("CheckBox");
 
         edt1 = findViewById(R.id.edtN1);
         edt2 = findViewById(R.id.edtN2);
@@ -31,19 +32,24 @@ public class CheckBoxActivity extends AppCompatActivity {
         btOperar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double a = Double.parseDouble(edt1.getText().toString());
-                double b = Double.parseDouble(edt2.getText().toString());
-                if (chk1.isChecked() == true){
-                    double s = a + b;
-                    result = "La suma es: " + s;
-                }
-                if (chk2.isChecked() == true){
-                    double r = a - b;
-                    result = result + " La resta es: " + r;
-                }
+                if (edt1.getText().toString().length() == 0){
+                    edt1.setError("Complete este campo");
+                } else if (edt2.getText().toString().length() == 0){
+                    edt2.setError("Campo requerido");
+                } else {
+                    double a = Double.parseDouble(edt1.getText().toString());
+                    double b = Double.parseDouble(edt2.getText().toString());
+                    if (chk1.isChecked() == true){
+                        double s = a + b;
+                        result = "La suma es: " + s;
+                    }
+                    if (chk2.isChecked() == true){
+                        double r = a - b;
+                        result = result + " La resta es: " + r;
+                    }
 
-                tvRes.setText(result);
-
+                    tvRes.setText(result);
+                }
             }
         });
 

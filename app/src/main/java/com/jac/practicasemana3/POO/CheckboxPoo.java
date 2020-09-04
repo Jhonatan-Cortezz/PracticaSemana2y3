@@ -35,17 +35,23 @@ public class CheckboxPoo extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View view) {
         String r = "";
-        OperacionesChechBox oper = new OperacionesChechBox();
-        oper.setNum1(Double.parseDouble(edt1.getText().toString()));
-        oper.setNum2(Double.parseDouble(edt2.getText().toString()));
+        if (edt1.getText().toString().length() == 0){
+            edt1.setError("Complete este campo");
+        } else if (edt2.getText().toString().length() == 0){
+            edt2.setError("Complete este campo");
+        } else {
+            OperacionesChechBox oper = new OperacionesChechBox();
+            oper.setNum1(Double.parseDouble(edt1.getText().toString()));
+            oper.setNum2(Double.parseDouble(edt2.getText().toString()));
 
-        if (chk1.isChecked() == true){
-            r = "La suma es: " + oper.sumar();
-        }
-        if (chk2.isChecked() == true){
-            r = r + " La resta es: " + oper.restar();
-        }
+            if (chk1.isChecked() == true){
+                r = "La suma es: " + oper.sumar();
+            }
+            if (chk2.isChecked() == true){
+                r = r + " La resta es: " + oper.restar();
+            }
 
-        result.setText(r);
+            result.setText(r);
+        }
     }
 }

@@ -15,6 +15,7 @@ public class IntentActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intent);
+        setTitle("Lanzamineto de Activity");
 
         btbAceraDe = findViewById(R.id.btnAcercaDe);
 

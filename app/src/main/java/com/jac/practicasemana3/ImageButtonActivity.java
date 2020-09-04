@@ -15,6 +15,7 @@ public class ImageButtonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_button);
+        setTitle("Evento click de Imagen Calling...");
 
         imt = findViewById(R.id.imageButton);
         textView = findViewById(R.id.txtImage);

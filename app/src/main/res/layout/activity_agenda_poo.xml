@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".Agenda">
 
+
     <EditText
         android:id="@+id/edtNombreP"
         android:hint="Nombre de la persona"

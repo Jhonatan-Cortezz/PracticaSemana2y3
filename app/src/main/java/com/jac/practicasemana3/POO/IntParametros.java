@@ -29,9 +29,13 @@ public class IntParametros extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-        Intent i = new Intent(this, Web.class);
-        i.putExtra("direccion", url.getText().toString());
-        startActivity(i);
+        if (url.getText().toString().length() == 0){
+            url.setError("Complete este campo");
+        } else {
+            Intent i = new Intent(this, Web.class);
+            i.putExtra("direccion", url.getText().toString());
+            startActivity(i);
+        }
 
     }
 }

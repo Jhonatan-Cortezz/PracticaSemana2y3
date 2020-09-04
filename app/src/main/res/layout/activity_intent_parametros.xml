@@ -8,9 +8,10 @@
     android:layout_height="match_parent"
     tools:context=".IntentParametros">
 
+
     <EditText
         android:id="@+id/edtUrl"
-        android:hint="Ingrese la Url del sitio web"
+        android:hint="Ingrese Url de sitio web ww.algo.com"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -19,5 +20,6 @@
         android:text="Ver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

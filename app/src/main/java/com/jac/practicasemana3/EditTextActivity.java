@@ -16,6 +16,7 @@ public class EditTextActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_text);
+        setTitle("Alerta con Toast clave == 0");
 
         edtOne = findViewById(R.id.edtCorreo);
         edtTwo = findViewById(R.id.textPassword);

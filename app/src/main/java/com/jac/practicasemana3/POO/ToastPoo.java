@@ -34,13 +34,17 @@ public class ToastPoo extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View view) {
         String valorIngresado = edtAd.getText().toString();
-        int valo = Integer.parseInt(valorIngresado);
-        if (valo == num){
-            Toast notificacion = Toast.makeText(this, "Muy bien recordaste el numero mostrado", Toast.LENGTH_LONG);
-            notificacion.show();
+        if (valorIngresado.length() == 0){
+            edtAd.setError("Ingrese el numero que vio");
         } else {
-            Toast notificacion = Toast.makeText(this, "Numero equivocado", Toast.LENGTH_LONG);
-            notificacion.show();
+            int valo = Integer.parseInt(valorIngresado);
+            if (valo == num){
+                Toast notificacion = Toast.makeText(this, "Muy bien recordaste el numero mostrado", Toast.LENGTH_LONG);
+                notificacion.show();
+            } else {
+                Toast notificacion = Toast.makeText(this, "Numero equivocado", Toast.LENGTH_LONG);
+                notificacion.show();
+            }
         }
     }
 }

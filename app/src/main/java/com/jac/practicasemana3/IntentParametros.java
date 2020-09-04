@@ -16,6 +16,7 @@ public class IntentParametros extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intent_parametros);
+        setTitle("Intent con parametros");
 
         url = findViewById(R.id.edtUrl);
         btnUrl = findViewById(R.id.botonUrl);
@@ -25,8 +26,12 @@ public class IntentParametros extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View view) {
-        Intent i = new Intent(this, SitioWeb.class);
-        i.putExtra("direccion", url.getText().toString());
-        startActivity(i);
+        if (url.getText().toString().length() == 0){
+            url.setError("Escriba una Url");
+        } else {
+            Intent i = new Intent(this, SitioWeb.class);
+            i.putExtra("direccion", url.getText().toString());
+            startActivity(i);
+        }
     }
 }

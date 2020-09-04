@@ -13,12 +13,13 @@ public class SitioWeb extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sitio_web);
+        setTitle("Sitio Web");
 
         vistaWeb = findViewById(R.id.sitioWeb);
 
         Bundle bundle = getIntent().getExtras();
         String dato = bundle.getString("direccion");
-        vistaWeb.loadUrl("http://" + dato);
+        vistaWeb.loadUrl("http://"+dato);
     }
 
     public void finalizar(View v){

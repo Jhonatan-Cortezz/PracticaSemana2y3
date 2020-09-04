@@ -20,6 +20,7 @@ public class ListViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
+        setTitle("Evento click de ListView");
 
         tv1 = findViewById(R.id.largo);
         lst = findViewById(R.id.lista);

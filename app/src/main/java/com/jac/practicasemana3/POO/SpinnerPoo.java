@@ -44,25 +44,31 @@ public class SpinnerPoo extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View view) {
         OperacionesChechBox spin = new OperacionesChechBox();
-        spin.setNum1(Double.parseDouble(edt1.getText().toString()));
-        spin.setNum2(Double.parseDouble(edt2.getText().toString()));
-        String select = spinner.getSelectedItem().toString();
-        if (select.equals("Sumar")){
-            double s = spin.sumar();
-            String resu = String.valueOf(s);
-            rst.setText(resu);
-        } else if (select.equals("Restar")){
-            double s = spin.restar();
-            String resu = String.valueOf(s);
-            rst.setText(resu);
-        } else if (select.equals("Multiplicar")){
-            double s = spin.multiplicar();
-            String resu = String.valueOf(s);
-            rst.setText(resu);
-        } else if (select.equals("Dividir")){
-            double s = spin.dividir();
-            String resu = String.valueOf(s);
-            rst.setText(resu);
+        if (edt1.getText().toString().length() == 0){
+            edt1.setError("Campo obligatorio");
+        } else if (edt2.getText().toString().length() == 0){
+            edt2.setError("Campo obligatorio");
+        } else {
+            spin.setNum1(Double.parseDouble(edt1.getText().toString()));
+            spin.setNum2(Double.parseDouble(edt2.getText().toString()));
+            String select = spinner.getSelectedItem().toString();
+            if (select.equals("Sumar")){
+                double s = spin.sumar();
+                String resu = String.valueOf(s);
+                rst.setText(resu);
+            } else if (select.equals("Restar")){
+                double s = spin.restar();
+                String resu = String.valueOf(s);
+                rst.setText(resu);
+            } else if (select.equals("Multiplicar")){
+                double s = spin.multiplicar();
+                String resu = String.valueOf(s);
+                rst.setText(resu);
+            } else if (select.equals("Dividir")){
+                double s = spin.dividir();
+                String resu = String.valueOf(s);
+                rst.setText(resu);
+            }
         }
     }
 }

@@ -8,11 +8,14 @@
     android:layout_height="match_parent"
     tools:context=".Ejercicios.NumeroRamdom">
 
+
+
     <EditText
         android:id="@+id/ramdom"
         android:layout_marginTop="30dp"
         android:hint="Cual es el numero que vió"
         android:textSize="20dp"
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -39,5 +42,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

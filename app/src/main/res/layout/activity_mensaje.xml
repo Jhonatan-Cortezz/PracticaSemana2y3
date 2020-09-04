@@ -8,11 +8,13 @@
     android:layout_margin="20dp"
     tools:context=".Ejercicios.Mensaje">
 
+
     <TextView
         android:gravity="center_horizontal"
         android:textSize="30dp"
         android:text="Bienvenid@"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

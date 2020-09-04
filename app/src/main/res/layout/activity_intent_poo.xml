@@ -8,10 +8,12 @@
     android:layout_height="match_parent"
     tools:context=".IntentActivity">
 
+
     <Button
         android:id="@+id/btnAcercaDeP"
         android:text="Acerca de"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

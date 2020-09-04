@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">PracticaSemana3</string>
+    <string name="app_name">Practica semana 2 y 3</string>
     <string name="poo1">Ejerciocios Resueltos con POO</string>
     <string name="normal">Ejercicios Resueltos en base a guia práctica</string>
     <string name="poo2">En esta sección encontrará todos los ejercicios resueltos con el paradigma de Programacion Orientada
     a Objetos</string>
     <string name="normal2">En esta seccion estan se encuentran resueltos todos los ejercicios en base a guia práctica</string>
+    <string name="url"><u>Ver código fuente de la App</u></string>
 </resources>

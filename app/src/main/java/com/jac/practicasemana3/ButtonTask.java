@@ -18,6 +18,7 @@ public class ButtonTask extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_button_task);
+        setTitle("Evento click Button");
 
         valor1 = (EditText) findViewById(R.id.edtPrimerValor);
         valor2 = (EditText) findViewById(R.id.edtSegundoValor);
@@ -27,12 +28,18 @@ public class ButtonTask extends AppCompatActivity {
         btnSumar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double n1 = Double.parseDouble(valor1.getText().toString());
-                double n2 = Double.parseDouble(valor2.getText().toString());
-                total = n1 + n2;
+                if (valor1.getText().toString().length() == 0){
+                    valor1.setError("Campo requerido");
+                } else if (valor2.getText().toString().length() == 0){
+                    valor2.setError("Campo requerido");
+                } else {
+                    double n1 = Double.parseDouble(valor1.getText().toString());
+                    double n2 = Double.parseDouble(valor2.getText().toString());
+                    total = n1 + n2;
 
-                String result = String.valueOf(total);
-                resultado.setText(result);
+                    String result = String.valueOf(total);
+                    resultado.setText(result);
+                }
             }
         });
     }

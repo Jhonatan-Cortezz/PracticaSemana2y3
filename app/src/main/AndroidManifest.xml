@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jac.practicasemana3">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -11,40 +11,181 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ejercicios.NumeroRamdom"></activity>
-        <activity android:name=".Ejercicios.Mensaje" />
-        <activity android:name=".Ejercicios.Clave" />
-        <activity android:name=".Ejercicios.VistaOpciones" />
-        <activity android:name=".POO.AgendaPoo" />
-        <activity android:name=".POO.SharedPoo" />
-        <activity android:name=".POO.Web" />
-        <activity android:name=".POO.IntParametros" />
-        <activity android:name=".POO.AboutPoo" />
-        <activity android:name=".POO.IntentPoo" />
-        <activity android:name=".POO.EditPoo" />
-        <activity android:name=".POO.ToastPoo" />
-        <activity android:name=".POO.ImagePoo" />
-        <activity android:name=".POO.ListViewPoo" />
-        <activity android:name=".POO.SpinnerPoo" />
-        <activity android:name=".POO.CheckboxPoo" />
-        <activity android:name=".POO.RadioPoo" />
-        <activity android:name=".POO.ButtonPoo" />
-        <activity android:name=".Agenda" />
-        <activity android:name=".SharedActivity" />
-        <activity android:name=".SitioWeb" />
-        <activity android:name=".IntentParametros" />
-        <activity android:name=".AcercaDe" />
-        <activity android:name=".IntentActivity" />
-        <activity android:name=".EditTextActivity" />
-        <activity android:name=".ToastActivity" />
-        <activity android:name=".ImageButtonActivity" />
-        <activity android:name=".ListViewActivity" />
-        <activity android:name=".SpinnerActivity" />
-        <activity android:name=".CheckBoxActivity" />
-        <activity android:name=".RadioGrup" />
-        <activity android:name=".ButtonTask" />
-        <activity android:name=".GuiaAtivity" />
-        <activity android:name=".PooActivity" />
+        <activity android:name=".Acerca">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".Ejercicios.NumeroRamdom">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Ejercicios.VistaOpciones" />
+        </activity>
+        <activity android:name=".Ejercicios.Mensaje">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Ejercicios.Clave" />
+        </activity>
+        <activity android:name=".Ejercicios.Clave">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Ejercicios.VistaOpciones" />
+        </activity>
+        <activity android:name=".Ejercicios.VistaOpciones">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".POO.AgendaPoo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PooActivity" />
+        </activity>
+        <activity android:name=".POO.SharedPoo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PooActivity" />
+        </activity>
+        <activity android:name=".POO.Web">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".POO.IntParametros" />
+        </activity>
+        <activity android:name=".POO.IntParametros">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PooActivity" />
+        </activity>
+        <activity android:name=".POO.AboutPoo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".POO.IntentPoo" />
+        </activity>
+        <activity android:name=".POO.IntentPoo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PooActivity" />
+        </activity>
+        <activity android:name=".POO.EditPoo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PooActivity" />
+        </activity>
+        <activity android:name=".POO.ToastPoo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PooActivity" />
+        </activity>
+        <activity android:name=".POO.ImagePoo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PooActivity" />
+        </activity>
+        <activity android:name=".POO.ListViewPoo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PooActivity" />
+        </activity>
+        <activity android:name=".POO.SpinnerPoo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PooActivity" />
+        </activity>
+        <activity android:name=".POO.CheckboxPoo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PooActivity" />
+        </activity>
+        <activity android:name=".POO.RadioPoo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PooActivity" />
+        </activity>
+        <activity android:name=".POO.ButtonPoo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PooActivity" />
+        </activity>
+        <activity android:name=".Agenda">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GuiaAtivity" />
+        </activity>
+        <activity android:name=".SharedActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GuiaAtivity" />
+        </activity>
+        <activity android:name=".SitioWeb">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".IntentParametros" />
+        </activity>
+        <activity android:name=".IntentParametros">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GuiaAtivity" />
+        </activity>
+        <activity android:name=".AcercaDe">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".IntentActivity" />
+        </activity>
+        <activity android:name=".IntentActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GuiaAtivity" />
+        </activity>
+        <activity android:name=".EditTextActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GuiaAtivity" />
+        </activity>
+        <activity android:name=".ToastActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GuiaAtivity" />
+        </activity>
+        <activity android:name=".ImageButtonActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GuiaAtivity" />
+        </activity>
+        <activity android:name=".ListViewActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GuiaAtivity" />
+        </activity>
+        <activity android:name=".SpinnerActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GuiaAtivity" />
+        </activity>
+        <activity android:name=".CheckBoxActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GuiaAtivity" />
+        </activity>
+        <activity android:name=".RadioGrup">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GuiaAtivity" />
+        </activity>
+        <activity android:name=".ButtonTask">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GuiaAtivity" />
+        </activity>
+        <activity android:name=".GuiaAtivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".PooActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

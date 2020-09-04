@@ -46,7 +46,10 @@ public class NumeroRamdom extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         String ingreso = numero.getText().toString();
         int n = Integer.parseInt(ingreso);
-        if (n > num){
+
+        if (numero.getText().toString().length() == 0){
+            numero.setError("Escriba el numero que vio");
+        } else if (n > num){
             Toast not = Toast.makeText(this, "El numero ingresado es mayor", Toast.LENGTH_LONG);
             not.show();
         } else if (n < num){

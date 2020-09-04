@@ -17,6 +17,7 @@ public class SharedActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shared);
+        setTitle("Guardar correo SharedPreferences");
 
         edtShared = findViewById(R.id.sharedId);
         btnVerificar = findViewById(R.id.btnShared);
@@ -28,10 +29,14 @@ public class SharedActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferencias.edit();
-        editor.putString("mail", edtShared.getText().toString());
-        editor.commit();
-        finish();
+        if (edtShared.getText().toString().length() == 0){
+            edtShared.setError("Ingrese la direccion de un email");
+        } else {
+            SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferencias.edit();
+            editor.putString("mail", edtShared.getText().toString());
+            editor.commit();
+            finish();
+        }
     }
 }
